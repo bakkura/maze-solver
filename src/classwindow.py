@@ -1,5 +1,7 @@
 from tkinter import Tk, BOTH, Canvas
 import time
+from .classline import Line
+from .classpoint import Point
 
 class Window:
     def __init__(self, width, height):
@@ -24,3 +26,6 @@ class Window:
 
     def close(self):
         self.running = False
+
+    def draw_line(self, line, fill_color):
+        line.draw(self.__canvas, fill_color)
